@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>逻辑‘与和或’操作 | 大香蕉</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="逻辑‘与和或’操作 js 中的逻辑‘与和或’操作属于短路操作，即如果第一个操作数能够决定结果，那么就不会再对第二个操作数求值。  以 逻辑与 为例， 第一操作数为false，则返回 false，不执行第二个操作数（即使第二个操作数 有错误） 1234var a = falsevar result = (a &amp;amp;&amp;amp; someUndefinedVar)   //  没有发生错误，因为 s">
+<meta name="keywords" content="js高程读书笔记,JavaSript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="逻辑‘与和或’操作">
+<meta property="og:url" content="http://yoursite.com/2016/12/22/逻辑‘与和或’操作/index.html">
+<meta property="og:site_name" content="大香蕉">
+<meta property="og:description" content="逻辑‘与和或’操作 js 中的逻辑‘与和或’操作属于短路操作，即如果第一个操作数能够决定结果，那么就不会再对第二个操作数求值。  以 逻辑与 为例， 第一操作数为false，则返回 false，不执行第二个操作数（即使第二个操作数 有错误） 1234var a = falsevar result = (a &amp;amp;&amp;amp; someUndefinedVar)   //  没有发生错误，因为 s">
+<meta property="og:updated_time" content="2017-02-18T14:04:58.440Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="逻辑‘与和或’操作">
+<meta name="twitter:description" content="逻辑‘与和或’操作 js 中的逻辑‘与和或’操作属于短路操作，即如果第一个操作数能够决定结果，那么就不会再对第二个操作数求值。  以 逻辑与 为例， 第一操作数为false，则返回 false，不执行第二个操作数（即使第二个操作数 有错误） 1234var a = falsevar result = (a &amp;amp;&amp;amp; someUndefinedVar)   //  没有发生错误，因为 s">
+  
+    <link rel="alternative" href="/atom.xml" title="大香蕉" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css?v=4.0.0">
+  
+
+  
+
+</head>
+
+<body>
+  <div id="container" q-class="show:isCtnShow">
+    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="left-col" q-class="show:isShow">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="/img/banana.jpg" class="js-avatar">
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">大香蕉</a></h1>
+		</hgroup>
+
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a data-idx="0" q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a data-idx="1" q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://www.github.com/BigBanan" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="jianshu" target="_blank" href="http://www.jianshu.com/users/6584f6817320/latest_articles" title="jianshu"><i class="icon-jianshu"></i></a>
+		        
+					<a class="mail" target="_blank" href="mailto:BigBananas@qq.com" title="mail"><i class="icon-mail"></i></a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-sort"></i></div>
+  		<h1 class="header-author js-mobile-header hide">大香蕉</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="/img/banana.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">大香蕉</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+		        
+		        	<li><a href="/archives/">所有文章</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://www.github.com/BigBanan" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="jianshu" target="_blank" href="http://www.jianshu.com/users/6584f6817320/latest_articles" title="jianshu"><i class="icon-jianshu"></i></a>
+			        
+						<a class="mail" target="_blank" href="mailto:BigBananas@qq.com" title="mail"><i class="icon-mail"></i></a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div id="wrapper" class="body-wrap">
+        <div class="menu-l">
+          <div class="canvas-wrap">
+            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+          </div>
+          <div id="js-content" class="content-ll">
+            <article id="post-逻辑‘与和或’操作" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      逻辑‘与和或’操作
+    </h1>
+  
+
+        <a href="/2016/12/22/逻辑‘与和或’操作/" class="archive-article-date">
+  	<time datetime="2016-12-21T17:11:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-22</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="逻辑‘与和或’操作"><a href="#逻辑‘与和或’操作" class="headerlink" title="逻辑‘与和或’操作"></a>逻辑‘与和或’操作</h1><ol>
+<li><p>js 中的逻辑‘与和或’操作属于<strong>短路操作</strong>，即如果第一个操作数能够决定结果，那么就不会再对第二个操作数求值。</p>
+<ul>
+<li><p>以 <strong>逻辑与</strong> 为例， 第一操作数为false，则返回 false，不执行第二个操作数（即使第二个操作数 有错误）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="literal">false</span></span><br><span class="line"><span class="keyword">var</span> result = (a &amp;&amp; someUndefinedVar)   <span class="comment">//  没有发生错误，因为 someUndefinedVar 没有执行</span></span><br><span class="line"><span class="keyword">var</span> b = <span class="literal">true</span></span><br><span class="line"><span class="keyword">var</span> result = (b &amp;&amp; someUndefinedVar)   <span class="comment">//  发生错误:  someUndefinedVar is no defined</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>同理对于 逻辑或， 第一操作数为true，则返回 true，不执行第二个操作数（即使第二个操作数 有错误）<br><br></p>
+</li>
+</ul>
+</li>
+</ol>
+<a id="more"></a>
+<ol>
+<li>逻辑‘与和或’操作可以适用于任何类型的操作数，而不仅仅是布尔值。<br><strong> 在有一个操作数不是布尔值的情况下，逻辑与操作就不一定返回布尔值 </strong><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">// 以 逻辑与 为例</span></span><br><span class="line"><span class="keyword">var</span> obj1 = &#123;</span><br><span class="line">    a: <span class="string">'b'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> c = <span class="string">'Halo'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> r1 = obj1 &amp;&amp; c</span><br><span class="line"><span class="built_in">console</span>.log(r1)  <span class="comment">// r1 = c ，因为 obj1 转换为布尔值为 true， 则接着执行第二个操作数，结果返回第二个操作数</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> t = <span class="literal">true</span></span><br><span class="line"><span class="keyword">var</span> r2 = t &amp;&amp; obj</span><br><span class="line"><span class="built_in">console</span>.log(r2) <span class="comment">// r2 = obj1 ，根据笔记 2 返回 obj1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj2 = &#123;</span><br><span class="line">    d: <span class="string">'e'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> r3 = obj1 &amp;&amp; obj2</span><br><span class="line"><span class="built_in">console</span>.log(r3) <span class="comment">// r3 = obj2, 因为 obj1 转换为布尔值为 true，接着执行第二个操作数，返回 obj2</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><br></p>
+<ol>
+<li>逻辑 <strong>‘与’ </strong> 中的某一操作数为 <strong>null undefined NaN</strong>,则对应返回 <strong>null undefined NaN</strong><ul>
+<li>若 逻辑操作 中既有 null 也有 NaN， 则根据<strong>短路操作</strong>先遇到谁就返回谁<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例</span></span><br><span class="line"><span class="keyword">var</span> r = <span class="literal">null</span>  &amp;&amp; <span class="literal">undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(r) <span class="comment">// r = null, 因为先遇到 null ，由于短路操作，第二操作数不执行，直接返回 null</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<p><br></p>
+<ol>
+<li>逻辑 <strong>‘或’ </strong> 中的两个操作数<strong>都</strong>为 <strong>null undefined NaN</strong>,才返回 <strong>null undefined NaN</strong><ul>
+<li>若 逻辑操作 中既有 null 也有 NaN， 则根据<strong>笔记 2 </strong>返回第二个操作数<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例</span></span><br><span class="line"><span class="keyword">var</span> r = <span class="literal">null</span>  || <span class="literal">undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(r) <span class="comment">// r = undefined, 因为先遇到 null ，null 转化为布尔值为 false，所以接着执行第二操作数，根据笔记 2 返回第二操作数</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<p><br></p>
+<blockquote>
+<p>注：以上知识不建议用在日常代码中， 对于一个大项目，进行迭代，你就要回去看自己的代码，而以上知识不常用，这样写以后 debug 会就不容易<br>最好的写法是，直接明了的,如:</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if(condition)&#123;</span><br><span class="line">    a = a + b</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    a = a + c</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这样即好理解，也容易 debug</p>
+</blockquote>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaSript/">JavaSript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js高程读书笔记/">js高程读书笔记</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-book icon"></i>
+	<a class="article-category-link" href="/categories/js-高程读书笔记/">js 高程读书笔记</a>
+	</div>
+
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/12/22/逻辑‘与和或’操作/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2016/12/22/部署个人博客-hexo/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          部署个人博客 hexo
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2018 大香蕉
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: false,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js?v=4.0.0"></script>
+
+
+    
+<div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all" q-show="innerArchive">
+        <div class="search-wrap">
+          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
+          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
+          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
+        </div>
+        <div class="widget tagcloud search-tag">
+          <p class="search-tag-wording">tag:</p>
+          <label class="search-switch">
+            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
+          </label>
+          <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">工具使用</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">CSS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">HTML</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">js高程读书笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">JavaSript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">js杂记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">JavaScript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">浏览器接口</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">web后端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">nginx</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">个人杂想</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">萧大语录</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">window</a>
+              </li>
+            
+            <div class="clearfix"></div>
+          </ul>
+        </div>
+        <ul class="search-ul">
+          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
+            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            2、在根目录_config.yml里添加配置：
+<pre style="font-size: 12px;" q-show="jsonFail">
+  jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: true
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+</pre>
+          </p>
+          <li class="search-li" q-repeat="items" q-show="isShow">
+            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
+            <p class="search-time">
+              <i class="icon-calendar icon"></i>
+              <span q-text="date|dateformat"></span>
+            </p>
+            <p class="search-tag">
+              <i class="icon-price-tags icon"></i>
+              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
+            </p>
+          </li>
+        </ul>
+    	</section>
+    
+
+    
+
+    
+    	<section class="tools-section tools-section-me" q-show="aboutme">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

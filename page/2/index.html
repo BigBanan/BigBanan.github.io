@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>大香蕉</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="大香蕉">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta property="og:site_name" content="大香蕉">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="大香蕉">
+  
+    <link rel="alternative" href="/atom.xml" title="大香蕉" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css?v=4.0.0">
+  
+
+  
+
+</head>
+
+<body>
+  <div id="container" q-class="show:isCtnShow">
+    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="left-col" q-class="show:isShow">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="/img/banana.jpg" class="js-avatar">
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">大香蕉</a></h1>
+		</hgroup>
+
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a data-idx="0" q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a data-idx="1" q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://www.github.com/BigBanan" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="jianshu" target="_blank" href="http://www.jianshu.com/users/6584f6817320/latest_articles" title="jianshu"><i class="icon-jianshu"></i></a>
+		        
+					<a class="mail" target="_blank" href="mailto:BigBananas@qq.com" title="mail"><i class="icon-mail"></i></a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-sort"></i></div>
+  		<h1 class="header-author js-mobile-header hide">大香蕉</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="/img/banana.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">大香蕉</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+		        
+		        	<li><a href="/archives/">所有文章</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://www.github.com/BigBanan" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="jianshu" target="_blank" href="http://www.jianshu.com/users/6584f6817320/latest_articles" title="jianshu"><i class="icon-jianshu"></i></a>
+			        
+						<a class="mail" target="_blank" href="mailto:BigBananas@qq.com" title="mail"><i class="icon-mail"></i></a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div id="wrapper" class="body-wrap">
+        <div class="menu-l">
+          <div class="canvas-wrap">
+            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+          </div>
+          <div id="js-content" class="content-ll">
+            
+  
+    <article id="post-eval-方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/27/eval-方法/">eval() 方法</a>
+    </h1>
+  
+
+        <a href="/2016/12/27/eval-方法/" class="archive-article-date">
+  	<time datetime="2016-12-27T05:00:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-27</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="eval-方法像是一个-js-解析器-它只接受一个参数-即要执行的-js-语句的字符串"><a href="#eval-方法像是一个-js-解析器-它只接受一个参数-即要执行的-js-语句的字符串" class="headerlink" title="eval() 方法像是一个 js 解析器,它只接受一个参数,即要执行的 js 语句的字符串"></a>eval() 方法像是一个 js 解析器,它只接受一个参数,即要执行的 js 语句的字符串</h2><blockquote>
+<p>注意: eval() 功力太强,能不用就不用,用不好就gg了</p>
+</blockquote>
+        
+          <a class="article-more-a" href="/2016/12/27/eval-方法/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaSript/">JavaSript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js高程读书笔记/">js高程读书笔记</a></li></ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-this-arguments" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/26/this-arguments/">this &amp; arguments</a>
+    </h1>
+  
+
+        <a href="/2016/12/26/this-arguments/" class="archive-article-date">
+  	<time datetime="2016-12-26T14:29:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-26</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="在函数内部-有两个特殊的对象-arguments-和-this"><a href="#在函数内部-有两个特殊的对象-arguments-和-this" class="headerlink" title="在函数内部,有两个特殊的对象: arguments 和 this"></a>在函数内部,有两个特殊的对象: arguments 和 this</h2>
+        
+          <a class="article-more-a" href="/2016/12/26/this-arguments/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaSript/">JavaSript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js高程读书笔记/">js高程读书笔记</a></li></ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-执行环境及作用域" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/26/执行环境及作用域/">执行环境及作用域</a>
+    </h1>
+  
+
+        <a href="/2016/12/26/执行环境及作用域/" class="archive-article-date">
+  	<time datetime="2016-12-26T12:09:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-26</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>执行环境</strong>定义了变量或函数有权访问的其他数据,决定了他们各自的行为.每个执行环境都有一个与之关联的<strong>变量对象</strong>(用来保存<strong>执行环境</strong>中<strong>定义的所有变量和函数</strong>)</p>
+<p>在 Web 浏览器中,<strong>全局执行环境</strong>(即<strong>最外层</strong>的执行环境)被认为是 <strong>window 对象</strong>.</p>
+<p><strong>机制</strong>:每一个函数都有自己的执行环境.当执行流进入一个函数时,函数的环境就会被<strong>推入</strong>一个环境栈中.而在函数执行之后,栈将其环境<strong>弹出</strong>,把控制权返回给<strong>之前</strong>的执行环境.</p>
+        
+          <a class="article-more-a" href="/2016/12/26/执行环境及作用域/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaSript/">JavaSript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js高程读书笔记/">js高程读书笔记</a></li></ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-GitHub-远程库使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/26/GitHub-远程库使用/">GitHub 远程库使用</a>
+    </h1>
+  
+
+        <a href="/2016/12/26/GitHub-远程库使用/" class="archive-article-date">
+  	<time datetime="2016-12-26T08:12:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-26</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>之前说过 <a href="/2016/12/26/git-使用记录/">git 本地使用记录</a>,再说说 Github 的使用</p>
+        
+          <a class="article-more-a" href="/2016/12/26/GitHub-远程库使用/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具使用/">工具使用</a></li></ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-git-使用记录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/26/git-使用记录/">git 本地使用命令记录</a>
+    </h1>
+  
+
+        <a href="/2016/12/26/git-使用记录/" class="archive-article-date">
+  	<time datetime="2016-12-26T05:02:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-26</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>git 指令几天不看,就忘了,故写个博客,记录下</p>
+        
+          <a class="article-more-a" href="/2016/12/26/git-使用记录/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具使用/">工具使用</a></li></ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-基本包装类型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/25/基本包装类型/">基本包装类型</a>
+    </h1>
+  
+
+        <a href="/2016/12/25/基本包装类型/" class="archive-article-date">
+  	<time datetime="2016-12-25T09:26:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-25</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>JS 提供 3 个特殊的引用类型: <strong>Boolean Number String</strong></p>
+<h2 id="每当读取一个-基本类型值-时-后台就会创建一个对应的-基本包装类型-的对象-从而让我们能够调用一些方法来操作这些数据"><a href="#每当读取一个-基本类型值-时-后台就会创建一个对应的-基本包装类型-的对象-从而让我们能够调用一些方法来操作这些数据" class="headerlink" title="每当读取一个 基本类型值 时,后台就会创建一个对应的 基本包装类型 的对象,从而让我们能够调用一些方法来操作这些数据."></a>每当读取一个 <strong>基本类型值</strong> 时,后台就会创建一个对应的 <strong>基本包装类型</strong> 的对象,从而让我们能够调用一些方法来操作这些数据.</h2><p>来看下面的例子.</p>
+        
+          <a class="article-more-a" href="/2016/12/25/基本包装类型/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaSript/">JavaSript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js高程读书笔记/">js高程读书笔记</a></li></ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-程序员之路" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/24/程序员之路/">程序员之路</a>
+    </h1>
+  
+
+        <a href="/2016/12/24/程序员之路/" class="archive-article-date">
+  	<time datetime="2016-12-24T07:24:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-24</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="重要的是编程能力"><a href="#重要的是编程能力" class="headerlink" title="重要的是编程能力"></a>重要的是编程能力</h1><h2 id="1-简化问题的能力"><a href="#1-简化问题的能力" class="headerlink" title="1. 简化问题的能力"></a>1. 简化问题的能力</h2><blockquote>
+<ul>
+<li>拆封成几个小问题(如扫雷)</li>
+</ul>
+</blockquote>
+<h2 id="2-快速开发的能力"><a href="#2-快速开发的能力" class="headerlink" title="2. 快速开发的能力"></a>2. 快速开发的能力</h2><blockquote>
+<ul>
+<li>大量练习打码</li>
+</ul>
+</blockquote>
+<h2 id="3-解决别人不能解决的问题的能力"><a href="#3-解决别人不能解决的问题的能力" class="headerlink" title="3. 解决别人不能解决的问题的能力"></a>3. 解决别人不能解决的问题的能力</h2><h1 id="编程能力会有平台期-重要的是坚持度过-就会有提升"><a href="#编程能力会有平台期-重要的是坚持度过-就会有提升" class="headerlink" title="编程能力会有平台期,重要的是坚持度过,就会有提升"></a>编程能力会有平台期,重要的是坚持度过,就会有提升</h1>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/萧大语录/">萧大语录</a></li></ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-基本变量-引用变量" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/22/基本变量-引用变量/">基本变量&amp;引用变量</a>
+    </h1>
+  
+
+        <a href="/2016/12/22/基本变量-引用变量/" class="archive-article-date">
+  	<time datetime="2016-12-22T07:45:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-22</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="js-中包含两种不同数据类型的值"><a href="#js-中包含两种不同数据类型的值" class="headerlink" title="js 中包含两种不同数据类型的值"></a>js 中包含两种不同数据类型的值</h3><pre><code>-  基本类型值
+    1. undefined
+    2. Null
+    3. Boolean
+    4. Number
+    5. String
+- 引用类型值
+    1. Object
+    2. Array
+    3. Function
+    4. 基本包装类型
+    ...
+</code></pre><p>下面说说我的理解<br>
+        
+          <a class="article-more-a" href="/2016/12/22/基本变量-引用变量/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaSript/">JavaSript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js高程读书笔记/">js高程读书笔记</a></li></ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-部署个人博客-hexo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/22/部署个人博客-hexo/">部署个人博客 hexo</a>
+    </h1>
+  
+
+        <a href="/2016/12/22/部署个人博客-hexo/" class="archive-article-date">
+  	<time datetime="2016-12-21T18:31:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-22</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>之前听萧大说过 HEXO 部署个人静态博客, 这几天试了一下，发现他的优点挺多的</p>
+<ul>
+<li><p>简单。</p>
+</li>
+<li><p>有很多主题可以选。</p>
+</li>
+<li><p>静态页面，可以上传到 GitHub Pages 做自己的主页。（配置下 HEXO 就可以很简单上传）</p>
+</li>
+<li><p>写文章便携，只需用 markdown 语法写出文章，剩下的就交给 HEXO 去处理。</p>
+</li>
+</ul>
+<p>接着我就试着搭起了自己人生中的第一个博客。接下来记录一下我怎么搭 HEXO。</p>
+        
+          <a class="article-more-a" href="/2016/12/22/部署个人博客-hexo/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具使用/">工具使用</a></li></ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-逻辑‘与和或’操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/22/逻辑‘与和或’操作/">逻辑‘与和或’操作</a>
+    </h1>
+  
+
+        <a href="/2016/12/22/逻辑‘与和或’操作/" class="archive-article-date">
+  	<time datetime="2016-12-21T17:11:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-22</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="逻辑‘与和或’操作"><a href="#逻辑‘与和或’操作" class="headerlink" title="逻辑‘与和或’操作"></a>逻辑‘与和或’操作</h1><ol>
+<li><p>js 中的逻辑‘与和或’操作属于<strong>短路操作</strong>，即如果第一个操作数能够决定结果，那么就不会再对第二个操作数求值。</p>
+<ul>
+<li><p>以 <strong>逻辑与</strong> 为例， 第一操作数为false，则返回 false，不执行第二个操作数（即使第二个操作数 有错误）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="literal">false</span></span><br><span class="line"><span class="keyword">var</span> result = (a &amp;&amp; someUndefinedVar)   <span class="comment">//  没有发生错误，因为 someUndefinedVar 没有执行</span></span><br><span class="line"><span class="keyword">var</span> b = <span class="literal">true</span></span><br><span class="line"><span class="keyword">var</span> result = (b &amp;&amp; someUndefinedVar)   <span class="comment">//  发生错误:  someUndefinedVar is no defined</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>同理对于 逻辑或， 第一操作数为true，则返回 true，不执行第二个操作数（即使第二个操作数 有错误）<br><br></p>
+</li>
+</ul>
+</li>
+</ol>
+        
+          <a class="article-more-a" href="/2016/12/22/逻辑‘与和或’操作/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaSript/">JavaSript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js高程读书笔记/">js高程读书笔记</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-book icon"></i>
+	<a class="article-category-link" href="/categories/js-高程读书笔记/">js 高程读书笔记</a>
+	</div>
+
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </nav>
+  
+
+
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2018 大香蕉
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: false,
+		isHome: true,
+		isPost: false,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js?v=4.0.0"></script>
+
+
+    
+<div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all" q-show="innerArchive">
+        <div class="search-wrap">
+          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
+          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
+          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
+        </div>
+        <div class="widget tagcloud search-tag">
+          <p class="search-tag-wording">tag:</p>
+          <label class="search-switch">
+            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
+          </label>
+          <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">工具使用</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">CSS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">HTML</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">js高程读书笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">JavaSript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">js杂记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">JavaScript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">浏览器接口</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">web后端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">nginx</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">个人杂想</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">萧大语录</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">window</a>
+              </li>
+            
+            <div class="clearfix"></div>
+          </ul>
+        </div>
+        <ul class="search-ul">
+          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
+            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            2、在根目录_config.yml里添加配置：
+<pre style="font-size: 12px;" q-show="jsonFail">
+  jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: true
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+</pre>
+          </p>
+          <li class="search-li" q-repeat="items" q-show="isShow">
+            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
+            <p class="search-time">
+              <i class="icon-calendar icon"></i>
+              <span q-text="date|dateformat"></span>
+            </p>
+            <p class="search-tag">
+              <i class="icon-price-tags icon"></i>
+              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
+            </p>
+          </li>
+        </ul>
+    	</section>
+    
+
+    
+
+    
+    	<section class="tools-section tools-section-me" q-show="aboutme">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
